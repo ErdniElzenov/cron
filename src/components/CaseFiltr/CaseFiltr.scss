@@ -1,0 +1,135 @@
+.CaseFiltr {
+  color: rgb(255, 255, 255);
+  padding-top: 130px;
+
+  &__square {
+    margin-left: 60%;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+    border: 4px solid #fff;
+  }
+
+  &__square1 {
+    margin: 25px 0 100px;
+    width: 65px;
+    height: 65px;
+    border: 4px solid #fff;
+    border-radius: 5px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: 40;
+  }
+
+  &__filtr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--title {
+      font-size: 150px;
+      letter-spacing: 2px;
+    }
+
+    &--filtersBtn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    &--btnRect {
+      width: 25px;
+      height: 25px;
+      border: 3px solid #fff;
+      border-radius: 3px;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      margin-right: 32px;
+      cursor: pointer;
+    }
+
+    &--filtersText {
+      letter-spacing: 0.02em;
+      font-size: 48px;
+      cursor: pointer;
+      margin-bottom: 7px;
+    }
+
+    &--btnClean {
+      font-size: 24px;
+      color: #fb6542;
+      margin-bottom: 5px;
+      margin-right: 80px;
+      cursor: pointer;
+    }
+    &--borderClean {
+      height: 0;
+      width: 35px;
+      border: 1px solid #fb6542;
+      position: absolute;
+      bottom: 33px;
+      left: 120px;
+    }
+
+    &--animationLineLong {
+      width: 80px;
+      height: 0;
+      border: 1px solid #fff;
+      margin-right: 32px;
+      right: 0;
+      transition: right 0.3s ease-in-out;
+    }
+  }
+
+  &__table {
+    display: flex;
+    justify-content: space-between;
+
+    &--type {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      li {
+        list-style: none;
+        font-size: 24px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        max-width: 200px;
+      }
+    }
+    &--typeTitle {
+      font-weight: 700;
+      padding-bottom: 50px;
+    }
+  }
+  &__border {
+    width: 99%;
+    right: 0;
+    border: 1px solid #fff;
+    position: absolute;
+    background-color: #fff;
+    top: 60px;
+  }
+}
+.activ {
+  display: none;
+}
+.selected {
+  color: #fb6542;
+}
+
+.CaseFiltr__table--block {
+  position: absolute;
+  right: -120%;
+}
+.CaseFiltr__table--block.visible {
+  width: 100%;
+  position: relative;
+  transition: right 0.3s ease-in-out;
+  z-index: 10;
+  right: 0;
+  width: 100%;
+}

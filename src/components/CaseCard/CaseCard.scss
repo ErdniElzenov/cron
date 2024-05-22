@@ -1,0 +1,111 @@
+@import "../../styles/App.scss";
+
+.card {
+  color: #fff;
+  margin-top: 30px;
+  border-radius: 20px;
+  border: none;
+  align-items: flex-end;
+  img {
+    max-width: 655px;
+    @include w-1670 {
+      max-width: 645px;
+    }
+  }
+
+  @include w-1670 {
+    max-width: 645px;
+  }
+
+  .activBlock {
+    display: none;
+  }
+  img {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.card:hover {
+  img {
+    display: none;
+  }
+  .activBlock {
+    display: block;
+    position: absolute;
+    flex-wrap: wrap;
+    font-size: 20px;
+    line-height: 1.4;
+    bottom: 40px;
+    padding: 10px;
+    h1 {
+      font-size: 52px;
+    }
+  }
+}
+#second0 {
+  height: 665px;
+  img {
+    max-height: 655px;
+    height: auto;
+    width: auto;
+    margin: auto;
+  }
+}
+
+.card:nth-child(6n + 1) {
+  height: 530px;
+  img {
+    max-height: 530px;
+    height: auto;
+    width: auto;
+    margin: auto;
+  }
+}
+
+.card:nth-child(6n + 2) {
+  height: 665px;
+  img {
+    max-height: 665px;
+    height: auto;
+    width: auto;
+    margin: auto;
+  }
+}
+.card:nth-child(6n + 3) {
+  height: 635px;
+  img {
+    max-height: 635px;
+    height: auto;
+    width: auto;
+    margin: auto;
+  }
+}
+
+.card:nth-child(6n + 4) {
+  height: 635px;
+  img {
+    max-height: 635px;
+    height: auto;
+    width: auto;
+    margin: auto;
+  }
+}
+.card:nth-child(6n + 5) {
+  height: 665px;
+  img {
+    max-height: 665px;
+    height: auto;
+    width: auto;
+    margin: auto;
+  }
+}
+.card:nth-child(6n + 6) {
+  height: 665px;
+  img {
+    max-height: 665px;
+    height: auto;
+    width: auto;
+    margin: auto;
+  }
+}

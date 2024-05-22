@@ -1,0 +1,65 @@
+.Footer {
+  width: 1350px;
+  padding: 100px 0;
+
+  &__partner {
+    color: #fff;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 700;
+    &--line {
+      width: 2px;
+      height: 60px;
+      opacity: 0.5;
+      background-color: #fff;
+      margin: 60px auto 0;
+    }
+
+    &--email {
+      font-size: 96px;
+      margin-top: 60px;
+      cursor: pointer;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  &__block {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    &--sity {
+      font-weight: 700;
+    }
+    &--phone {
+      cursor: pointer;
+      color: #fb6542;
+    }
+  }
+  &__connect--ID {
+    text-align: center;
+  }
+  &__connect--t {
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+
+.blockWidth {
+  width: 400px;
+}
+.ButtonRequest {
+  border: none;
+  font-weight: 700;
+  width: 300px;
+  height: 300px;
+  background-color: #fb6542;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 36px;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+}

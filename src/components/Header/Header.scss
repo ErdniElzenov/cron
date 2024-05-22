@@ -1,0 +1,30 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 60px;
+
+  align-items: center;
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  height: 120px;
+  background-color: rgba(0, 0, 0, 0.596);
+  &__menu {
+    display: flex;
+    gap: 120px;
+
+    &--block {
+      display: flex;
+      padding-top: 6px;
+      gap: 32px;
+    }
+    &--item {
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 20px;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import "../../styles/App.scss";
+.bankruptcy {
+  @include w-800 {
+    margin-top: 50px;
+  }
+}
+
+.case {
+  max-width: 1550px;
+  margin: auto;
+  &__list {
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
