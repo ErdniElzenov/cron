@@ -6,15 +6,21 @@
   border-radius: 20px;
   border: none;
   align-items: flex-end;
-  img {
-    max-width: 655px;
-    @include w-1670 {
-      max-width: 645px;
-    }
+  width: 655px;
+  // position: relative;
+  @include w-1670 {
+    min-width: 562px;
+    width: 100%;
   }
 
-  @include w-1670 {
-    max-width: 645px;
+  img {
+    max-width: 655px;
+    // position: absolute;
+    // left: 50%;
+    // transform: translate(-50%);
+    @include w-1670 {
+      width: 100%;
+    }
   }
 
   .activBlock {
@@ -30,6 +36,7 @@
   img {
     display: none;
   }
+
   .activBlock {
     display: block;
     position: absolute;
@@ -43,23 +50,30 @@
     }
   }
 }
+
 #second0 {
   height: 665px;
   img {
     max-height: 655px;
     height: auto;
     width: auto;
-    margin: auto;
   }
 }
 
 .card:nth-child(6n + 1) {
   height: 530px;
+
   img {
     max-height: 530px;
     height: auto;
     width: auto;
-    margin: auto;
+  }
+
+  @include w-1670 {
+    height: 422px;
+    img {
+      max-height: 422px;
+    }
   }
 }
 
@@ -69,16 +83,25 @@
     max-height: 665px;
     height: auto;
     width: auto;
-    margin: auto;
+  }
+  @include w-1670 {
+    img {
+      max-height: 500px;
+    }
   }
 }
+
 .card:nth-child(6n + 3) {
   height: 635px;
   img {
     max-height: 635px;
     height: auto;
     width: auto;
-    margin: auto;
+  }
+  @include w-1670 {
+    img {
+      max-height: 480px;
+    }
   }
 }
 
@@ -88,7 +111,11 @@
     max-height: 635px;
     height: auto;
     width: auto;
-    margin: auto;
+  }
+  @include w-1670 {
+    img {
+      max-height: 480px;
+    }
   }
 }
 .card:nth-child(6n + 5) {
@@ -97,7 +124,11 @@
     max-height: 665px;
     height: auto;
     width: auto;
-    margin: auto;
+  }
+  @include w-1670 {
+    img {
+      max-height: 500px;
+    }
   }
 }
 .card:nth-child(6n + 6) {
@@ -106,6 +137,10 @@
     max-height: 665px;
     height: auto;
     width: auto;
-    margin: auto;
+  }
+  @include w-1670 {
+    img {
+      max-height: 480px;
+    }
   }
 }

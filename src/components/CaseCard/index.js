@@ -29,7 +29,6 @@ const CaseCard = ({ caseData, caseIndex }) => {
 
   const cardStyle = {
     backgroundColor: "#" + caseColor,
-    width: 655,
     color: textColor,
   };
 

@@ -106,7 +106,7 @@
     }
   }
   &__border {
-    width: 99%;
+    width: 97.3%;
     right: 0;
     border: 1px solid #fff;
     position: absolute;
@@ -122,7 +122,7 @@
 }
 
 .CaseFiltr__table--block {
-  position: absolute;
+  position: fixed;
   right: -120%;
 }
 .CaseFiltr__table--block.visible {
