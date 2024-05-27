@@ -69,55 +69,67 @@ const CaseFiltr = ({ setFilter, filterMass }) => {
         >
           <div className="CaseFiltr__border"></div>
           <div className="CaseFiltr__table--type">
-            <ul>
-              <li className="CaseFiltr__table--typeTitle ">Отрасль </li>
-              {TypsFiltrs.Industry.map((item, index) => (
-                <li
-                  key={index}
-                  onClick={() => handleFilterClick(item)}
-                  className={selectedFilters.includes(item) ? "selected" : ""}
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
+            <div className="CaseFiltr__table--typeMob">
+              <ul>
+                <li className="CaseFiltr__table--typeTitle ">Отрасль </li>
+                {TypsFiltrs.Industry.map((item, index) => (
+                  <li
+                    key={index}
+                    onClick={() => handleFilterClick(item)}
+                    className={selectedFilters.includes(item) ? "selected" : ""}
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
 
-            <ul>
-              <li className="CaseFiltr__table--typeTitle">Платформы </li>
-              {TypsFiltrs.Platforms.map((item, index) => (
-                <li
-                  key={index}
-                  onClick={() => handleFilterClick(item)}
-                  className={selectedFilters.includes(item) ? "selected" : ""}
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <ul>
-              <li className="CaseFiltr__table--typeTitle">Услуги </li>
-              {TypsFiltrs.Services.map((item, index) => (
-                <li
-                  key={index}
-                  onClick={() => handleFilterClick(item)}
-                  className={selectedFilters.includes(item) ? "selected" : ""}
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <ul>
-              <li className="CaseFiltr__table--typeTitle">Языки </li>
-              {TypsFiltrs.Languages.map((item, index) => (
-                <li
-                  key={index}
-                  onClick={() => handleFilterClick(item)}
-                  className={selectedFilters.includes(item) ? "selected" : ""}
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
+              <ul>
+                <li className="CaseFiltr__table--typeTitle">Платформы </li>
+                {TypsFiltrs.Platforms.map((item, index) => (
+                  <li
+                    key={index}
+                    onClick={() => handleFilterClick(item)}
+                    className={selectedFilters.includes(item) ? "selected" : ""}
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="CaseFiltr__table--block2">
+              <div className="CaseFiltr__table--border"></div>
+              <div className="CaseFiltr__table--typeMob">
+                <ul>
+                  <li className="CaseFiltr__table--typeTitle">Услуги </li>
+                  {TypsFiltrs.Services.map((item, index) => (
+                    <li
+                      key={index}
+                      onClick={() => handleFilterClick(item)}
+                      className={
+                        selectedFilters.includes(item) ? "selected" : ""
+                      }
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <ul>
+                  <li className="CaseFiltr__table--typeTitle">Языки </li>
+                  {TypsFiltrs.Languages.map((item, index) => (
+                    <li
+                      key={index}
+                      onClick={() => handleFilterClick(item)}
+                      className={
+                        selectedFilters.includes(item) ? "selected" : ""
+                      }
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import { Card } from "antd";
 import "./CaseCard.scss";
 
-const CaseCard = ({ caseData, caseIndex }) => {
+const CaseCard = ({ caseData, second }) => {
   const hexToRgb = (hex) => {
     const bigint = parseInt(hex, 16);
     return [(bigint >> 16) & 255, (bigint >> 8) & 255, bigint & 255];
@@ -35,9 +35,9 @@ const CaseCard = ({ caseData, caseIndex }) => {
   return (
     <Card
       hoverable
-      id={caseIndex}
+      id="card"
       style={cardStyle}
-      className="card"
+      className={`${second} card`}
       cover={
         <img
           className="card__img"

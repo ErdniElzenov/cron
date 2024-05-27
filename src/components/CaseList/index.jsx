@@ -38,7 +38,7 @@ const CaseList = ({ filter }) => {
             <CaseCard
               key={caseData.id}
               caseData={caseData}
-              caseIndex={`second${caseIndex}`}
+              second={"second"}
               isFirstInSecond={caseIndex === 0}
             />
           ))}

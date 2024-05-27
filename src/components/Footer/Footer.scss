@@ -1,7 +1,11 @@
+@import "../../styles/App.scss";
+
 .Footer {
   width: 1350px;
   padding: 100px 0;
-
+  @include w-1470 {
+    width: 100%;
+  }
   &__partner {
     color: #fff;
     font-size: 36px;
@@ -18,22 +22,51 @@
     &--email {
       font-size: 96px;
       margin-top: 60px;
+      font-weight: 400;
       cursor: pointer;
       width: 100%;
       text-align: center;
+      @include w-1670 {
+        font-size: 80px;
+        @include w-770 {
+          font-size: 60px;
+        }
+      }
     }
   }
+
   &__block {
     margin-top: 100px;
     display: flex;
     justify-content: space-between;
     font-size: 24px;
+
+    @include w-1470 {
+      width: 400px;
+      text-align: center;
+      display: block;
+      margin: 100px auto;
+    }
     &--sity {
       font-weight: 700;
     }
     &--phone {
       cursor: pointer;
       color: #fb6542;
+    }
+
+    &--address {
+      @include w-1470 {
+        display: none;
+      }
+    }
+
+    &--addressMob {
+      display: none;
+      @include w-1470 {
+        display: block;
+        margin-bottom: 40px;
+      }
     }
   }
   &__connect--ID {
@@ -49,6 +82,7 @@
   width: 400px;
 }
 .ButtonRequest {
+  margin: 60px auto;
   border: none;
   font-weight: 700;
   width: 300px;
@@ -62,4 +96,14 @@
   text-align: center;
   justify-content: center;
   cursor: pointer;
+  @include w-1670 {
+    width: 250px;
+    height: 250px;
+    font-size: 26px;
+    @include w-600 {
+      width: 130px;
+      height: 130px;
+      font-size: 16px;
+    }
+  }
 }

@@ -1,9 +1,4 @@
 @import "../../styles/App.scss";
-.bankruptcy {
-  @include w-800 {
-    margin-top: 50px;
-  }
-}
 
 .case {
   max-width: 1550px;
@@ -11,6 +6,24 @@
   &__list {
     padding: 0 100px;
     display: flex;
-    justify-content: space-between;
+    gap: 48px;
+    @include w-1670 {
+      padding: 0 60px;
+      gap: 31px;
+
+      @include w-770 {
+        display: block;
+        padding: 0 40px;
+        @include w-600 {
+          padding: 0 16px;
+        }
+      }
+    }
+  }
+  &__firstCaises {
+    width: 100%;
+  }
+  &__secondCaises {
+    width: 100%;
   }
 }

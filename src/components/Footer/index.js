@@ -10,7 +10,7 @@ const Footer = () => {
       </div>
 
       <div className="Footer__block">
-        <div className="Footer__block--address blockWidth">
+        <div className="Footer__block--address ">
           <div className="Footer__block--sity">Россия, Москва</div>
           <div className="Footer__block--street">
             119330, ул. Мосфильмовская, 35
@@ -18,6 +18,14 @@ const Footer = () => {
           <div className="Footer__block--phone">+7 (495) 006-13-57</div>
         </div>
         <button className="ButtonRequest ">Оставить заявку</button>
+
+        <div className="Footer__block--addressMob ">
+          <div className="Footer__block--sity">Россия, Москва</div>
+          <div className="Footer__block--street">
+            119330, ул. Мосфильмовская, 35
+          </div>
+          <div className="Footer__block--phone">+7 (495) 006-13-57</div>
+        </div>
 
         <div className="Footer__connection blockWidth">
           <div className="Footer__connect--ID">Связаться через</div>

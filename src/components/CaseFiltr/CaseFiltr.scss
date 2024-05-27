@@ -1,3 +1,5 @@
+@import "../../styles/App.scss";
+
 .CaseFiltr {
   color: rgb(255, 255, 255);
   padding-top: 130px;
@@ -10,6 +12,9 @@
     -webkit-transform: rotate(15deg);
     transform: rotate(15deg);
     border: 4px solid #fff;
+    @include w-600 {
+      display: none;
+    }
   }
 
   &__square1 {
@@ -21,23 +26,51 @@
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     z-index: 40;
+    margin-left: 60px;
+
+    @include w-770 {
+      margin-left: 40px;
+      @include w-600 {
+        display: none;
+      }
+    }
   }
 
   &__filtr {
     display: flex;
     justify-content: space-between;
+    position: relative;
     align-items: center;
-
+    line-height: 0;
+    padding: 0 60px;
+    @include w-1024 {
+      display: block;
+      @include w-770 {
+        padding: 0 40px;
+      }
+    }
     &--title {
       font-size: 150px;
       letter-spacing: 2px;
+      @include w-1470 {
+        font-size: 120px;
+        @include w-1024 {
+          font-size: 90px;
+          @include w-770 {
+            font-size: 70px;
+          }
+        }
+      }
     }
 
     &--filtersBtn {
       display: flex;
-      justify-content: space-between;
       align-items: center;
       position: relative;
+
+      @include w-1024 {
+        justify-content: right;
+      }
     }
 
     &--btnRect {
@@ -49,6 +82,10 @@
       transform: rotate(45deg);
       margin-right: 32px;
       cursor: pointer;
+      @include w-600 {
+        width: 20px;
+        height: 20px;
+      }
     }
 
     &--filtersText {
@@ -56,6 +93,9 @@
       font-size: 48px;
       cursor: pointer;
       margin-bottom: 7px;
+      @include w-600 {
+        font-size: 24px;
+      }
     }
 
     &--btnClean {
@@ -81,6 +121,9 @@
       margin-right: 32px;
       right: 0;
       transition: right 0.3s ease-in-out;
+      @include w-600 {
+        display: none;
+      }
     }
   }
 
@@ -90,28 +133,92 @@
 
     &--type {
       display: flex;
-      justify-content: space-between;
       width: 100%;
+      @include w-1024 {
+        display: block;
+      }
+      ul {
+        width: 100%;
+      }
       li {
         list-style: none;
         font-size: 24px;
         cursor: pointer;
         margin-bottom: 20px;
         max-width: 200px;
+        @include w-770 {
+          font-size: 18px;
+          @include w-600 {
+            max-width: 70%;
+          }
+        }
       }
     }
+    &--typeMob {
+      display: flex;
+      position: relative;
+      gap: 20%;
+      width: 50%;
+      @include w-1470 {
+        gap: 10%;
+        @include w-1270 {
+          gap: 5%;
+          @include w-600 {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+    }
+
     &--typeTitle {
       font-weight: 700;
       padding-bottom: 50px;
+      @include w-600 {
+        width: 100%;
+        padding: 20px 0 10px;
+        border-bottom: solid #fff 2px;
+      }
+    }
+
+    &--block2 {
+      position: relative;
+    }
+    &--border {
+      display: none;
+      @include w-1024 {
+        display: block;
+        width: 83.5%;
+        right: 100px;
+        border: 1px solid #fff;
+        position: absolute;
+        background-color: #fff;
+        top: 60px;
+        @include w-770 {
+          width: 77.5%;
+          @include w-600 {
+            display: none;
+          }
+        }
+      }
     }
   }
   &__border {
-    width: 97.3%;
-    right: 0;
+    width: 90%;
+    right: 100px;
     border: 1px solid #fff;
     position: absolute;
     background-color: #fff;
     top: 60px;
+    @include w-1024 {
+      width: 83.5%;
+      @include w-770 {
+        width: 77.5%;
+        @include w-600 {
+          display: none;
+        }
+      }
+    }
   }
 }
 .activ {

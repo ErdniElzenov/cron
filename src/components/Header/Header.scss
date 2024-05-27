@@ -1,9 +1,10 @@
+@import "../../styles/App.scss";
+
 .Header {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   padding: 0 60px;
-
   align-items: center;
   box-sizing: border-box;
   position: fixed;
@@ -11,14 +12,21 @@
   z-index: 10;
   height: 120px;
   background-color: rgba(0, 0, 0, 0.596);
+
+  @include w-770 {
+    padding: 0 40px;
+  }
   &__menu {
     display: flex;
-    gap: 120px;
+    gap: 110px;
 
     &--block {
       display: flex;
       padding-top: 6px;
       gap: 32px;
+      @include w-770 {
+        display: none;
+      }
     }
     &--item {
       text-transform: uppercase;
