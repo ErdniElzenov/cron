@@ -32,8 +32,8 @@ const CaseFiltr = ({ setFilter, filterMass }) => {
       <header className="CaseFiltr__filtr">
         <h1 className="CaseFiltr__filtr--title">Кейсы</h1>
         <div className="CaseFiltr__filtr--filtersBtn">
-          {selectedFilters.length ? (
-            <div>
+          {selectedFilters.length > 0 && (
+            <div className="CaseFiltr__filtr--btnBlock">
               <div
                 className="CaseFiltr__filtr--btnClean"
                 onClick={handleClearFilters}
@@ -42,19 +42,27 @@ const CaseFiltr = ({ setFilter, filterMass }) => {
               </div>
               <div className="CaseFiltr__filtr--borderClean"></div>
             </div>
-          ) : (
-            ""
           )}
-
           <div className="CaseFiltr__filtr--cleanLine"></div>
           <div
-            className="CaseFiltr__filtr--btnRect"
+            id={isFilterPanelVisible ? "backgroundColor" : ""}
+            className={`CaseFiltr__filtr--btnRect ${
+              selectedFilters.length ? "borderColor__activ" : ""
+            }`}
             onClick={toggleFilterPanel}
           ></div>
-          <div className="CaseFiltr__filtr--animationLineLong"></div>
+          <div
+            className={`CaseFiltr__filtr--animationLineLong ${
+              isFilterPanelVisible ? "activNone" : ""
+            }`}
+          ></div>
           <div
             onClick={toggleFilterPanel}
-            className="CaseFiltr__filtr--filtersText"
+            className={
+              isFilterPanelVisible
+                ? "CaseFiltr__filtr--filtersText selected"
+                : "CaseFiltr__filtr--filtersText"
+            }
           >
             Фильтры
           </div>
@@ -71,7 +79,7 @@ const CaseFiltr = ({ setFilter, filterMass }) => {
           <div className="CaseFiltr__table--type">
             <div className="CaseFiltr__table--typeMob">
               <ul>
-                <li className="CaseFiltr__table--typeTitle ">Отрасль </li>
+                <li className="CaseFiltr__table--typeTitle">Отрасль</li>
                 {TypsFiltrs.Industry.map((item, index) => (
                   <li
                     key={index}
@@ -84,7 +92,7 @@ const CaseFiltr = ({ setFilter, filterMass }) => {
               </ul>
 
               <ul>
-                <li className="CaseFiltr__table--typeTitle">Платформы </li>
+                <li className="CaseFiltr__table--typeTitle">Платформы</li>
                 {TypsFiltrs.Platforms.map((item, index) => (
                   <li
                     key={index}
@@ -101,7 +109,7 @@ const CaseFiltr = ({ setFilter, filterMass }) => {
               <div className="CaseFiltr__table--border"></div>
               <div className="CaseFiltr__table--typeMob">
                 <ul>
-                  <li className="CaseFiltr__table--typeTitle">Услуги </li>
+                  <li className="CaseFiltr__table--typeTitle">Услуги</li>
                   {TypsFiltrs.Services.map((item, index) => (
                     <li
                       key={index}
@@ -115,7 +123,7 @@ const CaseFiltr = ({ setFilter, filterMass }) => {
                   ))}
                 </ul>
                 <ul>
-                  <li className="CaseFiltr__table--typeTitle">Языки </li>
+                  <li className="CaseFiltr__table--typeTitle">Языки</li>
                   {TypsFiltrs.Languages.map((item, index) => (
                     <li
                       key={index}

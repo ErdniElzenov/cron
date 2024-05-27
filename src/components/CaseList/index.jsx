@@ -1,16 +1,24 @@
+import { useEffect } from "react";
 import { useStore } from "effector-react";
-import { casesStore } from "../../store";
-import CaseCard from "../CaseCard";
+import { casesStore, fetchCasesFx, errorStore } from "../../store";
 
+import CaseCard from "../CaseCard";
 import "./CaseList.scss";
+import { Spin, Alert } from "antd";
 
 const CaseList = ({ filter }) => {
   const cases = useStore(casesStore);
+  const error = useStore(errorStore);
+  useEffect(() => {
+    fetchCasesFx();
+  }, []);
 
-  if (!cases?.Data) {
-    return <div>Loading...</div>;
+  if (error) {
+    return <Alert message="Error" description={error.message} type="error" />;
   }
-
+  if (!cases?.Data) {
+    return <Spin className="spin" />;
+  }
   const SetFilter = new Set(filter);
 
   const filteredCases = cases.Data.filter((item) =>

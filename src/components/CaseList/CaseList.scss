@@ -27,3 +27,15 @@
     width: 100%;
   }
 }
+
+/* Ваши стили CSS */
+
+.custom-spin .ant-spin-dot i {
+  background-color: #fff;
+}
+
+.custom-spin {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+}

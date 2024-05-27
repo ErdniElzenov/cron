@@ -11,6 +11,10 @@
     font-size: 36px;
     text-align: center;
     font-weight: 700;
+    @include w-600 {
+      font-size: 16px;
+    }
+
     &--line {
       width: 2px;
       height: 60px;
@@ -30,13 +34,17 @@
         font-size: 80px;
         @include w-770 {
           font-size: 60px;
+          @include w-600 {
+            margin-top: 30px;
+            font-size: 32px;
+          }
         }
       }
     }
   }
 
   &__block {
-    margin-top: 100px;
+    margin-top: 60px;
     display: flex;
     justify-content: space-between;
     font-size: 24px;
@@ -45,7 +53,12 @@
       width: 400px;
       text-align: center;
       display: block;
-      margin: 100px auto;
+      margin: 60px auto;
+      @include w-600 {
+        font-size: 18px;
+        width: 300px;
+        margin: 0 auto;
+      }
     }
     &--sity {
       font-weight: 700;
@@ -78,9 +91,6 @@
   }
 }
 
-.blockWidth {
-  width: 400px;
-}
 .ButtonRequest {
   margin: 60px auto;
   border: none;

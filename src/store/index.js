@@ -1,4 +1,3 @@
-// src/store/index.js
 import { createStore, createEffect } from "effector";
 import axios from "axios";
 
@@ -17,4 +16,13 @@ const casesStore = createStore([]).on(
   (_, cases) => cases
 );
 
-export { fetchCasesFx, casesStore };
+const loadingStore = createStore(false).on(
+  fetchCasesFx.pending,
+  (_, pending) => pending
+);
+
+const errorStore = createStore(null)
+  .on(fetchCasesFx.failData, (_, error) => error)
+  .reset(fetchCasesFx);
+
+export { fetchCasesFx, casesStore, loadingStore, errorStore };

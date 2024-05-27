@@ -62,7 +62,9 @@
         }
       }
     }
-
+    &--btnBlock {
+      position: relative;
+    }
     &--filtersBtn {
       display: flex;
       align-items: center;
@@ -104,23 +106,43 @@
       margin-bottom: 5px;
       margin-right: 80px;
       cursor: pointer;
+      @include w-600 {
+        font-size: 18px;
+        margin-right: 15px;
+      }
     }
     &--borderClean {
       height: 0;
       width: 35px;
       border: 1px solid #fb6542;
       position: absolute;
-      bottom: 33px;
+      bottom: 0;
       left: 120px;
+      @include w-600 {
+        display: none;
+        width: 35px;
+      }
     }
 
     &--animationLineLong {
+      position: relative;
       width: 80px;
       height: 0;
       border: 1px solid #fff;
       margin-right: 32px;
       right: 0;
-      transition: right 0.3s ease-in-out;
+      animation-duration: 0.3s;
+      animation-name: slidein;
+
+      @keyframes slidein {
+        from {
+          width: 0;
+        }
+
+        to {
+          width: 80px;
+        }
+      }
       @include w-600 {
         display: none;
       }
@@ -134,12 +156,11 @@
     &--type {
       display: flex;
       width: 100%;
+      justify-content: space-around;
       @include w-1024 {
         display: block;
       }
-      ul {
-        width: 100%;
-      }
+
       li {
         list-style: none;
         font-size: 24px;
@@ -183,6 +204,12 @@
 
     &--block2 {
       position: relative;
+      display: flex;
+      width: 50%;
+      justify-content: space-between;
+      @include w-1024 {
+        width: 100%;
+      }
     }
     &--border {
       display: none;
@@ -221,11 +248,31 @@
     }
   }
 }
-.activ {
-  display: none;
+.activNone {
+  width: 0;
+  border: 0px solid #fff;
+  animation-duration: 0.3s;
+  animation-name: slidein1;
+
+  @keyframes slidein1 {
+    from {
+      width: 80px;
+    }
+
+    to {
+      width: 0;
+      border: 1px solid #fff;
+    }
+  }
 }
 .selected {
   color: #fb6542;
+}
+.borderColor__activ {
+  border: 3px solid #fb6542;
+}
+#backgroundColor {
+  background-color: #fff;
 }
 
 .CaseFiltr__table--block {
