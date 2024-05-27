@@ -59,8 +59,28 @@
     line-height: 1.4;
     bottom: 40px;
     padding: 10px;
+
+    @include w-1670 {
+      bottom: 20px;
+      padding: 5px;
+      @include w-1024 {
+        font-size: 16px;
+        @include w-600 {
+          font-size: 12px;
+        }
+      }
+    }
     h1 {
       font-size: 52px;
+      @include w-1670 {
+        font-size: 42px;
+        @include w-1470 {
+          font-size: 32px;
+          @include w-600 {
+            font-size: 20px;
+          }
+        }
+      }
     }
   }
 }
