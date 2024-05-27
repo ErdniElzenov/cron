@@ -17,7 +17,7 @@ const CaseList = ({ filter }) => {
     return <Alert message="Error" description={error.message} type="error" />;
   }
   if (!cases?.Data) {
-    return <Spin className="spin" />;
+    return <Spin className="custom-spin" />;
   }
   const SetFilter = new Set(filter);
 
