@@ -12,8 +12,8 @@
   width: 100%;
   z-index: 10;
   height: 120px;
-  background-color: rgba(0, 0, 0, 0.596);
-
+  background-color: rgba(19, 18, 18, 0.8);
+  backdrop-filter: blur(5px);
   @include w-770 {
     padding: 0 40px;
   }
@@ -33,6 +33,7 @@
       text-transform: uppercase;
       text-decoration: none;
       font-size: 20px;
+
       color: #fff;
     }
   }
